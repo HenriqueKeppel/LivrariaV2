@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using LivroApi.Models;
 using LivroApi.ResponseModels;
+using LivroApi.Services;
 
 namespace LivroApi.Controllers
 {
@@ -17,53 +18,7 @@ namespace LivroApi.Controllers
         {
             ResponseGet response = new ResponseGet();
 
-            #region Mock
-            LivroModel livroMock = new LivroModel
-            {
-                Isbn = 1,
-                Titulo = "Senhor dos Anéis - A Sociedade do Anel",
-                //public List<Guid> Editoras { get;set;  }
-                AnoLancamento = new DateTime(2018, 10, 14),
-                Valor = 59
-                //public List<Guid> Autores 
-            };
-
-            livroMock.Editoras.Add(1);
-            livroMock.Editoras.Add(2);
-
-            livroMock.Autores.Add(1);
-
-            LivroModel livroMock2 = new LivroModel
-            {
-                Isbn = 1,
-                Titulo = "Senhor dos Anéis - As Duas Torres",
-                AnoLancamento = new DateTime(2018, 10, 14),
-                Valor = 59
-            };
-
-            livroMock2.Editoras.Add(1);
-            livroMock2.Editoras.Add(2);
-
-            livroMock2.Autores.Add(1);
-
-            LivroModel livroMock3 = new LivroModel
-            {
-                Isbn = 1,
-                Titulo = "Senhor dos Anéis - O Retorno do Rei",
-                AnoLancamento = new DateTime(2018, 10, 14),
-                Valor = 59
-            };
-
-            livroMock3.Editoras.Add(1);
-            livroMock3.Editoras.Add(2);
-
-            livroMock3.Autores.Add(1);
-            #endregion
-
-            response.Livros.Add(livroMock);
-            response.Livros.Add(livroMock2);
-            response.Livros.Add(livroMock3);
-
+            response.Livros = Service.GetLivros().Result;
             return response;            
         }
 
@@ -73,46 +28,30 @@ namespace LivroApi.Controllers
         {
             ResponseGet response = new ResponseGet();
 
-            if (isbn == 1)
-            {
-                LivroModel livroMock = new LivroModel
-                {
-                    Isbn = 1,
-                    Titulo = "Senhor dos Anéis - A Sociedade do Anel",
-                    AnoLancamento = new DateTime(2018, 10, 14),
-                    Valor = 59
-                };
-
-                livroMock.Editoras.Add(1);
-                livroMock.Editoras.Add(2);
-
-                livroMock.Autores.Add(1);
-
-                response.Livros.Add(livroMock);
-            }
+            response.Livros = Service.GetLivro(isbn).Result;
 
             return response;
         }
 
         // POST api/values
         [HttpPost]
-        public async Task Post([FromBody]LivroModel value)
+        public async Task<bool> Post([FromBody]LivroModel value)
         {
-
+            return Service.Post(value).Result;
         }
 
         // PUT api/values/5
         [HttpPut("{isbn}")]
-        public async Task Put(int isbn, [FromBody]LivroModel value)
+        public async Task<bool> Put(int isbn, [FromBody]LivroModel value)
         {
-
+            return Service.Put(isbn, value).Result;
         }
 
         // DELETE api/values/5
         [HttpDelete("{isbn}")]
-        public async Task Delete(int isbn)
+        public async Task<bool> Delete(int isbn)
         {
-
+            return Service.Delete(isbn).Result;
         }
     }
 }
