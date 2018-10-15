@@ -1,0 +1,188 @@
+{
+	"id": "aabe0fec-b0ea-4f4b-8911-23a25324e563",
+	"name": "AutenticacaoApi",
+	"allTests": [],
+	"timestamp": "2018-10-08T02:08:03.591Z",
+	"collection_id": "cc492692-32cb-ac2b-53c1-b9163b30d72e",
+	"folder_id": "cdee359a-728d-4faf-9a99-977368ae3128",
+	"target_type": "folder",
+	"environment_id": "0",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "cc492692-32cb-ac2b-53c1-b9163b30d72e",
+		"name": "UnitTests",
+		"description": null,
+		"auth": null,
+		"events": null,
+		"variables": null,
+		"order": [],
+		"folders_order": [
+			"364e2dae-c863-445f-9366-647ce0b23a7d"
+		],
+		"owner": "3455482",
+		"permissions": {},
+		"favorite": false,
+		"shared": false,
+		"type": "collection",
+		"depth": 0
+	},
+	"folder": {
+		"id": "cdee359a-728d-4faf-9a99-977368ae3128",
+		"name": "AutenticacaoApi",
+		"description": null,
+		"auth": null,
+		"events": null,
+		"collection": "cc492692-32cb-ac2b-53c1-b9163b30d72e",
+		"folder": "364e2dae-c863-445f-9366-647ce0b23a7d",
+		"order": [
+			"8de8faa3-5214-4dd5-8ff8-9ea72336169a",
+			"e90f4e77-f585-4e75-9533-79d436921549"
+		],
+		"folders_order": [],
+		"type": "folder",
+		"depth": 2
+	},
+	"environment": null,
+	"globals": [],
+	"results": [
+		{
+			"name": "AutenticacaoPost",
+			"id": "8de8faa3-5214-4dd5-8ff8-9ea72336169a",
+			"url": "http://localhost:5002/AutenticacaoApi/v1/Autenticacao",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "Token preenchido",
+				"status": "pass",
+				"IsValid true": true
+			},
+			"testPassFailCounts": {
+				"Token preenchido": {
+					"pass": 1,
+					"fail": 0
+				},
+				"IsValid true": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"11"
+			],
+			"allTests": [
+				{
+					"Token preenchido": true,
+					"IsValid true": true
+				}
+			],
+			"time": "11",
+			"totalRequestTime": "11",
+			"iterationResults": {}
+		},
+		{
+			"name": "AutenticacaoPost-Error",
+			"id": "e90f4e77-f585-4e75-9533-79d436921549",
+			"url": "http://localhost:5002/AutenticacaoApi/v1/Autenticacao",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "Isvalid preenchido",
+				"status": "pass",
+				"IsValid true": true
+			},
+			"testPassFailCounts": {
+				"Isvalid preenchido": {
+					"pass": 1,
+					"fail": 0
+				},
+				"IsValid true": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"26"
+			],
+			"allTests": [
+				{
+					"Isvalid preenchido": true,
+					"IsValid true": true
+				}
+			],
+			"time": "26",
+			"totalRequestTime": "26",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 4,
+	"totalFail": 0,
+	"totalTime": 37,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "AutenticacaoPost",
+			"id": "8de8faa3-5214-4dd5-8ff8-9ea72336169a",
+			"url": "http://localhost:5002/AutenticacaoApi/v1/Autenticacao",
+			"time": "2018-10-08T02:08:03.591Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Token preenchido": {
+					"pass": 1,
+					"fail": 0
+				},
+				"IsValid true": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "AutenticacaoPost-Error",
+			"id": "e90f4e77-f585-4e75-9533-79d436921549",
+			"url": "http://localhost:5002/AutenticacaoApi/v1/Autenticacao",
+			"time": "2018-10-08T02:08:03.591Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Isvalid preenchido": {
+					"pass": 1,
+					"fail": 0
+				},
+				"IsValid true": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		}
+	],
+	"synced": false
+}
