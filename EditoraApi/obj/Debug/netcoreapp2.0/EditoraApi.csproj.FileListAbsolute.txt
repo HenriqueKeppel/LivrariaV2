@@ -1,0 +1,11 @@
+C:\Git\LivrariaV2\EditoraApi\bin\Debug\netcoreapp2.0\EditoraApi.deps.json
+C:\Git\LivrariaV2\EditoraApi\bin\Debug\netcoreapp2.0\EditoraApi.runtimeconfig.json
+C:\Git\LivrariaV2\EditoraApi\bin\Debug\netcoreapp2.0\EditoraApi.runtimeconfig.dev.json
+C:\Git\LivrariaV2\EditoraApi\bin\Debug\netcoreapp2.0\EditoraApi.dll
+C:\Git\LivrariaV2\EditoraApi\bin\Debug\netcoreapp2.0\EditoraApi.pdb
+C:\Git\LivrariaV2\EditoraApi\obj\Debug\netcoreapp2.0\EditoraApi.csprojAssemblyReference.cache
+C:\Git\LivrariaV2\EditoraApi\obj\Debug\netcoreapp2.0\EditoraApi.csproj.CoreCompileInputs.cache
+C:\Git\LivrariaV2\EditoraApi\obj\Debug\netcoreapp2.0\EditoraApi.AssemblyInfoInputs.cache
+C:\Git\LivrariaV2\EditoraApi\obj\Debug\netcoreapp2.0\EditoraApi.AssemblyInfo.cs
+C:\Git\LivrariaV2\EditoraApi\obj\Debug\netcoreapp2.0\EditoraApi.dll
+C:\Git\LivrariaV2\EditoraApi\obj\Debug\netcoreapp2.0\EditoraApi.pdb

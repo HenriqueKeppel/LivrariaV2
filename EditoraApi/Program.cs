@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace LivroApi
+namespace EditoraApi
 {
     public class Program
     {
@@ -20,7 +20,7 @@ namespace LivroApi
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
-                .UseUrls("http://localhost:5004")
+				.UseUrls("http://localhost:5006)
                 .Build();
     }
 }

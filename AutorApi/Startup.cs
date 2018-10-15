@@ -10,7 +10,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.Swagger;
 
-namespace LivroApi
+namespace AutorApi
 {
     public class Startup
     {
@@ -29,7 +29,7 @@ namespace LivroApi
             // Register the Swagger generator, defining 1 or more swagger documentos
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "LivroApi", Version = "v1" });
+                c.SwaggerDoc("v1", new Info { Title = "AutorApi", Version = "v1" });
             });
         }
 
@@ -44,7 +44,7 @@ namespace LivroApi
             app.UseSwagger();
             app.UseSwaggerUI(c => 
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "LivroApi-v1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "AutorApi-v1");
             });
 
             app.UseMvc();
