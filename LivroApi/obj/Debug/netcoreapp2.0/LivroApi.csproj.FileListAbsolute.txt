@@ -1,0 +1,11 @@
+C:\Git\LivrariaV2\LivroApi\bin\Debug\netcoreapp2.0\LivroApi.deps.json
+C:\Git\LivrariaV2\LivroApi\bin\Debug\netcoreapp2.0\LivroApi.runtimeconfig.json
+C:\Git\LivrariaV2\LivroApi\bin\Debug\netcoreapp2.0\LivroApi.runtimeconfig.dev.json
+C:\Git\LivrariaV2\LivroApi\bin\Debug\netcoreapp2.0\LivroApi.dll
+C:\Git\LivrariaV2\LivroApi\bin\Debug\netcoreapp2.0\LivroApi.pdb
+C:\Git\LivrariaV2\LivroApi\obj\Debug\netcoreapp2.0\LivroApi.csprojAssemblyReference.cache
+C:\Git\LivrariaV2\LivroApi\obj\Debug\netcoreapp2.0\LivroApi.csproj.CoreCompileInputs.cache
+C:\Git\LivrariaV2\LivroApi\obj\Debug\netcoreapp2.0\LivroApi.AssemblyInfoInputs.cache
+C:\Git\LivrariaV2\LivroApi\obj\Debug\netcoreapp2.0\LivroApi.AssemblyInfo.cs
+C:\Git\LivrariaV2\LivroApi\obj\Debug\netcoreapp2.0\LivroApi.dll
+C:\Git\LivrariaV2\LivroApi\obj\Debug\netcoreapp2.0\LivroApi.pdb
