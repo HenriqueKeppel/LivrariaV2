@@ -12781,11 +12781,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Git\\ArquiteturaBackEndAutenticacao\\AutenticacaoAPI\\AutenticacaoAPI.csproj",
+      "projectUniqueName": "C:\\Git\\LivrariaV2\\AutenticacaoAPI\\AutenticacaoAPI.csproj",
       "projectName": "AutenticacaoAPI",
-      "projectPath": "c:\\Git\\ArquiteturaBackEndAutenticacao\\AutenticacaoAPI\\AutenticacaoAPI.csproj",
+      "projectPath": "C:\\Git\\LivrariaV2\\AutenticacaoAPI\\AutenticacaoAPI.csproj",
       "packagesPath": "C:\\Users\\Keppel\\.nuget\\packages\\",
-      "outputPath": "c:\\Git\\ArquiteturaBackEndAutenticacao\\AutenticacaoAPI\\obj\\",
+      "outputPath": "C:\\Git\\LivrariaV2\\AutenticacaoAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

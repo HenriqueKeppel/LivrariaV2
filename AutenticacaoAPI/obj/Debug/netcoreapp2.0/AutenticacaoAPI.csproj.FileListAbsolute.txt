@@ -9,3 +9,14 @@ C:\Git\ArquiteturaBackEndAutenticacao\AutenticacaoAPI\obj\Debug\netcoreapp2.0\Au
 C:\Git\ArquiteturaBackEndAutenticacao\AutenticacaoAPI\obj\Debug\netcoreapp2.0\AutenticacaoAPI.AssemblyInfo.cs
 C:\Git\ArquiteturaBackEndAutenticacao\AutenticacaoAPI\obj\Debug\netcoreapp2.0\AutenticacaoAPI.dll
 C:\Git\ArquiteturaBackEndAutenticacao\AutenticacaoAPI\obj\Debug\netcoreapp2.0\AutenticacaoAPI.pdb
+C:\Git\LivrariaV2\AutenticacaoAPI\bin\Debug\netcoreapp2.0\AutenticacaoAPI.deps.json
+C:\Git\LivrariaV2\AutenticacaoAPI\bin\Debug\netcoreapp2.0\AutenticacaoAPI.runtimeconfig.json
+C:\Git\LivrariaV2\AutenticacaoAPI\bin\Debug\netcoreapp2.0\AutenticacaoAPI.runtimeconfig.dev.json
+C:\Git\LivrariaV2\AutenticacaoAPI\bin\Debug\netcoreapp2.0\AutenticacaoAPI.dll
+C:\Git\LivrariaV2\AutenticacaoAPI\bin\Debug\netcoreapp2.0\AutenticacaoAPI.pdb
+C:\Git\LivrariaV2\AutenticacaoAPI\obj\Debug\netcoreapp2.0\AutenticacaoAPI.csprojAssemblyReference.cache
+C:\Git\LivrariaV2\AutenticacaoAPI\obj\Debug\netcoreapp2.0\AutenticacaoAPI.csproj.CoreCompileInputs.cache
+C:\Git\LivrariaV2\AutenticacaoAPI\obj\Debug\netcoreapp2.0\AutenticacaoAPI.AssemblyInfoInputs.cache
+C:\Git\LivrariaV2\AutenticacaoAPI\obj\Debug\netcoreapp2.0\AutenticacaoAPI.AssemblyInfo.cs
+C:\Git\LivrariaV2\AutenticacaoAPI\obj\Debug\netcoreapp2.0\AutenticacaoAPI.dll
+C:\Git\LivrariaV2\AutenticacaoAPI\obj\Debug\netcoreapp2.0\AutenticacaoAPI.pdb
