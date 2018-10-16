@@ -1,0 +1,188 @@
+{
+	"id": "3ecc875d-6218-48ff-9f8f-e14503e76cdd",
+	"name": "CartaoCreditoApi",
+	"allTests": [],
+	"timestamp": "2018-10-08T02:34:21.238Z",
+	"collection_id": "cc492692-32cb-ac2b-53c1-b9163b30d72e",
+	"folder_id": "7891e956-adab-4894-b23b-0fba08ea56c7",
+	"target_type": "folder",
+	"environment_id": "0",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "cc492692-32cb-ac2b-53c1-b9163b30d72e",
+		"name": "UnitTests",
+		"description": null,
+		"auth": null,
+		"events": null,
+		"variables": null,
+		"order": [],
+		"folders_order": [
+			"364e2dae-c863-445f-9366-647ce0b23a7d"
+		],
+		"owner": "3455482",
+		"permissions": {},
+		"favorite": false,
+		"shared": false,
+		"type": "collection",
+		"depth": 0
+	},
+	"folder": {
+		"id": "7891e956-adab-4894-b23b-0fba08ea56c7",
+		"name": "CartaoCreditoApi",
+		"description": null,
+		"auth": null,
+		"events": null,
+		"collection": "cc492692-32cb-ac2b-53c1-b9163b30d72e",
+		"folder": "364e2dae-c863-445f-9366-647ce0b23a7d",
+		"order": [
+			"f1f4f2de-02fa-4fd9-ac24-ccd1deaf4c9d",
+			"ed0eb33c-ca7b-42ad-8811-67a6dde7d9ad"
+		],
+		"folders_order": [],
+		"type": "folder",
+		"depth": 2
+	},
+	"environment": null,
+	"globals": [],
+	"results": [
+		{
+			"name": "CartaoCreditoApi - Transacao POST",
+			"id": "f1f4f2de-02fa-4fd9-ac24-ccd1deaf4c9d",
+			"url": "http://localhost:5003/CartaoCreditoApi/v1/Transacao",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "Resposta em menos de 200ms",
+				"status": "pass",
+				"Status code deve ser 200": true
+			},
+			"testPassFailCounts": {
+				"Resposta em menos de 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"41"
+			],
+			"allTests": [
+				{
+					"Resposta em menos de 200ms": true,
+					"Status code deve ser 200": true
+				}
+			],
+			"time": "41",
+			"totalRequestTime": "41",
+			"iterationResults": {}
+		},
+		{
+			"name": "CartaoCreditoApi - Transacao GET",
+			"id": "ed0eb33c-ca7b-42ad-8811-67a6dde7d9ad",
+			"url": "http://localhost:5003/CartaoCreditoApi/v1/Transacao",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "Resposta valida e deve existir um body",
+				"status": "pass",
+				"Deve existir um campo cartao": true
+			},
+			"testPassFailCounts": {
+				"Resposta valida e deve existir um body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Deve existir um campo cartao": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"24"
+			],
+			"allTests": [
+				{
+					"Resposta valida e deve existir um body": true,
+					"Deve existir um campo cartao": true
+				}
+			],
+			"time": "24",
+			"totalRequestTime": "24",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 4,
+	"totalFail": 0,
+	"totalTime": 65,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "CartaoCreditoApi - Transacao POST",
+			"id": "f1f4f2de-02fa-4fd9-ac24-ccd1deaf4c9d",
+			"url": "http://localhost:5003/CartaoCreditoApi/v1/Transacao",
+			"time": "2018-10-08T02:34:21.238Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Resposta em menos de 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code deve ser 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "CartaoCreditoApi - Transacao GET",
+			"id": "ed0eb33c-ca7b-42ad-8811-67a6dde7d9ad",
+			"url": "http://localhost:5003/CartaoCreditoApi/v1/Transacao",
+			"time": "2018-10-08T02:34:21.238Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Resposta valida e deve existir um body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Deve existir um campo cartao": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		}
+	],
+	"synced": false
+}
