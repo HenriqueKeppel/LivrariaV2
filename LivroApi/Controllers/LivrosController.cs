@@ -10,7 +10,7 @@ using LivroApi.Services;
 namespace LivroApi.Controllers
 {
     [Route("LivroApi/v1/[controller]")]
-    public class LivroController : Controller
+    public class LivrosController : Controller
     {
         // GET api/values
         [HttpGet]
