@@ -1,0 +1,96 @@
+{
+	"id": "6272e096-a502-47a4-b2c4-a321723d32b7",
+	"name": "LoggerApi",
+	"allTests": [],
+	"timestamp": "2018-10-08T01:22:29.326Z",
+	"collection_id": "cc492692-32cb-ac2b-53c1-b9163b30d72e",
+	"folder_id": "17f4d977-f6f7-4f7d-a46d-55293607eb3d",
+	"target_type": "folder",
+	"environment_id": "0",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "cc492692-32cb-ac2b-53c1-b9163b30d72e",
+		"name": "UnitTests",
+		"description": null,
+		"auth": null,
+		"events": null,
+		"variables": null,
+		"order": [],
+		"folders_order": [
+			"364e2dae-c863-445f-9366-647ce0b23a7d"
+		],
+		"owner": "3455482",
+		"permissions": {},
+		"favorite": false,
+		"shared": false,
+		"type": "collection",
+		"depth": 0
+	},
+	"folder": {
+		"id": "17f4d977-f6f7-4f7d-a46d-55293607eb3d",
+		"name": "LoggerApi",
+		"description": null,
+		"auth": null,
+		"events": null,
+		"collection": "cc492692-32cb-ac2b-53c1-b9163b30d72e",
+		"folder": "364e2dae-c863-445f-9366-647ce0b23a7d",
+		"order": [
+			"acf6f430-3c39-45ea-a72d-c7447005cd53"
+		],
+		"folders_order": [],
+		"type": "folder",
+		"depth": 2
+	},
+	"environment": null,
+	"globals": [],
+	"results": [
+		{
+			"name": "PagamentoPost",
+			"id": "acf6f430-3c39-45ea-a72d-c7447005cd53",
+			"url": "http://localhost:5001/LoggerApi/v1/Logger/Pagamento",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {},
+			"times": [
+				"11"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "11",
+			"totalRequestTime": "11",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 0,
+	"totalFail": 0,
+	"totalTime": 11,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "PagamentoPost",
+			"id": "acf6f430-3c39-45ea-a72d-c7447005cd53",
+			"url": "http://localhost:5001/LoggerApi/v1/Logger/Pagamento",
+			"time": "2018-10-08T01:22:29.326Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {}
+		}
+	],
+	"synced": false
+}

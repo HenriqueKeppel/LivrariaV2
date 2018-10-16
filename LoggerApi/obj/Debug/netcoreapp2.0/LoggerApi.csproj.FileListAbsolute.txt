@@ -1,0 +1,11 @@
+C:\Git\LoggerApi\LoggerApi\obj\Debug\netcoreapp2.0\LoggerApi.csprojAssemblyReference.cache
+C:\Git\LoggerApi\LoggerApi\obj\Debug\netcoreapp2.0\LoggerApi.csproj.CoreCompileInputs.cache
+C:\Git\LoggerApi\LoggerApi\obj\Debug\netcoreapp2.0\LoggerApi.AssemblyInfoInputs.cache
+C:\Git\LoggerApi\LoggerApi\obj\Debug\netcoreapp2.0\LoggerApi.AssemblyInfo.cs
+C:\Git\LoggerApi\LoggerApi\bin\Debug\netcoreapp2.0\LoggerApi.deps.json
+C:\Git\LoggerApi\LoggerApi\bin\Debug\netcoreapp2.0\LoggerApi.runtimeconfig.json
+C:\Git\LoggerApi\LoggerApi\bin\Debug\netcoreapp2.0\LoggerApi.runtimeconfig.dev.json
+C:\Git\LoggerApi\LoggerApi\bin\Debug\netcoreapp2.0\LoggerApi.dll
+C:\Git\LoggerApi\LoggerApi\bin\Debug\netcoreapp2.0\LoggerApi.pdb
+C:\Git\LoggerApi\LoggerApi\obj\Debug\netcoreapp2.0\LoggerApi.dll
+C:\Git\LoggerApi\LoggerApi\obj\Debug\netcoreapp2.0\LoggerApi.pdb
