@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Linq;
@@ -16,6 +17,36 @@ namespace LivrariaApi.Adapters
             LivroModel livroResultado = null;
 
             var uri = new Uri(string.Format("{0}/Livros/{1}", urlBase, isbn));
+
+            using (var cliente = new HttpClient())
+            {
+                //var data = JsonConvert.SerializeObject(request);
+                //var content = new StringContent(data, Encoding.UTF8, "application/json");
+
+                HttpResponseMessage response = await cliente.GetAsync(uri);
+
+                if(response.IsSuccessStatusCode)
+                {
+                    // Retornou com sucesso
+                    var responseString = await response.Content.ReadAsStringAsync();
+                    responseGet = JsonConvert.DeserializeObject<LivroResponseGet>(responseString);
+
+                    // Se não houve erro, extrai o resultado
+                    if (responseGet != null && responseGet.IndicadorErro == 0)
+                    {
+                        livroResultado = responseGet.Livros.FirstOrDefault();
+                    }
+                }
+            }
+            return livroResultado;
+        }
+
+        public static async Task<IEnumerable<LivroModel>> GetLivro()
+        {
+            LivroResponseGet responseGet = null;
+            LivroModel livroResultado = null;
+
+            var uri = new Uri(string.Format("{0}/Livros/"));
 
             using (var cliente = new HttpClient())
             {
