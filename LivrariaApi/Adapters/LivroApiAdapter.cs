@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Linq;
 using LivrariaApi.AdapterModels;
 using Newtonsoft.Json;
+using System.Text;
 
 namespace LivrariaApi.Adapters
 {
@@ -41,12 +42,12 @@ namespace LivrariaApi.Adapters
             return livroResultado;
         }
 
-        public static async Task<IEnumerable<LivroModel>> GetLivro()
+        public static async Task<List<LivroModel>> GetLivro()
         {
             LivroResponseGet responseGet = null;
-            LivroModel livroResultado = null;
+            List<LivroModel> listaRetorno = null;
 
-            var uri = new Uri(string.Format("{0}/Livros/"));
+            var uri = new Uri(string.Format("{0}/Livros/", urlBase));
 
             using (var cliente = new HttpClient())
             {
@@ -64,11 +65,49 @@ namespace LivrariaApi.Adapters
                     // Se não houve erro, extrai o resultado
                     if (responseGet != null && responseGet.IndicadorErro == 0)
                     {
-                        livroResultado = responseGet.Livros.FirstOrDefault();
+                        listaRetorno = responseGet.Livros;
                     }
                 }
             }
-            return livroResultado;
+            return listaRetorno;
+        }
+
+        public static async Task<bool> PostLivro(LivroModel request)
+        {
+            var uri = new Uri(string.Format("{0}/Livros/", urlBase));
+
+            using (var cliente = new HttpClient())
+            {
+                var data = JsonConvert.SerializeObject(request);
+                var content = new StringContent(data, Encoding.UTF8, "application/json");
+
+                HttpResponseMessage response = await cliente.GetAsync(uri);
+
+                if(response.IsSuccessStatusCode)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public static async Task<bool> PutLivro(LivroModel request)
+        {
+            var uri = new Uri(string.Format("{0}/Livros/{1}", urlBase, request.Isbn));
+
+            using (var cliente = new HttpClient())
+            {
+                var data = JsonConvert.SerializeObject(request);
+                var content = new StringContent(data, Encoding.UTF8, "application/json");
+
+                HttpResponseMessage response = await cliente.GetAsync(uri);
+
+                if(response.IsSuccessStatusCode)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

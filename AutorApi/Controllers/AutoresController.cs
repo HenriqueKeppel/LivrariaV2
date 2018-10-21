@@ -9,7 +9,7 @@ using AutorApi.Services;
 
 namespace AutorApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("AutorApi/v1/[controller]")]
     public class AutoresController : Controller
     {
         // GET api/values

@@ -7,15 +7,15 @@ using Newtonsoft.Json;
 
 namespace LivrariaApi.Adapters
 {
-    public static class EditoraApiAdapter
+    public static class AutorApiAdapter
     {
-        private const string urlBase = "http://localhost:5006/EditoraApi/v1";
-        public static async Task<EditoraModel> GetEditora(int id)
+        private const string urlBase = "http://localhost:5005/AutorApi/v1";
+        public static async Task<AutorModel> GetAutor(int id)
         {
-            EditoraResponseGet responseGet = null;
-            EditoraModel editoraResultado = null;
+            AutorResponseGet responseGet = null;
+            AutorModel autorResultado = null;
 
-            var uri = new Uri(string.Format("{0}/Editora/{1}", urlBase, id));
+            var uri = new Uri(string.Format("{0}/Autores/{1}", urlBase, id));
 
             using (var cliente = new HttpClient())
             {
@@ -25,16 +25,16 @@ namespace LivrariaApi.Adapters
                 {
                     // Retornou com sucesso
                     var responseString = await response.Content.ReadAsStringAsync();
-                    responseGet = JsonConvert.DeserializeObject<EditoraResponseGet>(responseString);
+                    responseGet = JsonConvert.DeserializeObject<AutorResponseGet>(responseString);
 
                     // Se não houve erro, extrai o resultado
                     if (responseGet != null && responseGet.IndicadorErro == 0)
                     {
-                        editoraResultado = responseGet.Editoras.FirstOrDefault();
+                        autorResultado = responseGet.Autores.FirstOrDefault();
                     }
                 }
             }
-            return editoraResultado;
+            return autorResultado;
         }
     }
 }
