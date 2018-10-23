@@ -20,7 +20,7 @@ namespace LivrariaApi.Controllers
         {
             ResponseLivroGet result = new ResponseLivroGet();
 
-            var retorno = LivroService.GetLivros().Result;
+            var retorno = await LivroService.Obter();
 
             if (retorno != null)
             {
@@ -36,10 +36,10 @@ namespace LivrariaApi.Controllers
 
                     // Obter a editora do livro atraves do EditoraService                
                     foreach(int editoraId in livroItem.Editoras)
-                        livro.Editoras.Add(EditoraService.GetEditora(editoraId).Result);
+                        livro.Editoras.Add(await EditoraService.Obter(editoraId));
 
                     foreach(int autorId in livroItem.Autores)                 
-                        livro.Autores.Add(AutorService.GetAutor(autorId).Result);
+                        livro.Autores.Add(await AutorService.Obter(autorId));
 
                     result.Livros.Add(livro);   
                 }
@@ -53,7 +53,7 @@ namespace LivrariaApi.Controllers
         {
             ResponseLivroGet result = new ResponseLivroGet();
 
-            var retorno = await LivroService.GetLivro(isbn);
+            var retorno = await LivroService.Obter(isbn);
 
             if (retorno != null)
             {
@@ -67,10 +67,10 @@ namespace LivrariaApi.Controllers
 
                 // Obter a editora do livro atraves do EditoraService                
                 foreach(int editoraId in retorno.Editoras)
-                    livro.Editoras.Add(EditoraService.GetEditora(editoraId).Result);
+                    livro.Editoras.Add(await EditoraService.Obter(editoraId));
 
                 foreach(int autorId in retorno.Autores)                 
-                    livro.Autores.Add(AutorService.GetAutor(autorId).Result);
+                    livro.Autores.Add(await AutorService.Obter(autorId));
 
                 result.Livros.Add(livro);
             }
@@ -81,7 +81,7 @@ namespace LivrariaApi.Controllers
         [HttpPost]
         public async Task Post([FromBody]RequestLivroPost request)
         {
-            await LivroService.PostLivro(request.livro);
+            await LivroService.Incluir(request.livro);
         }
 
         // PUT api/values/5
@@ -89,15 +89,16 @@ namespace LivrariaApi.Controllers
         public async Task<bool> Put(int isbn, [FromBody]RequestLivroPost request)
         {
             if (isbn == request.livro.Isbn)
-                return await LivroService.PutLivro(request.livro);
+                return await LivroService.Editar(request.livro);
             else
                 return false;
         }
 
         // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public async Task Delete(int id)
+        [HttpDelete("{isbn}")]
+        public async Task Delete(int isbn)
         {
+            await LivroService.Remover(isbn);
         }
     }
 }

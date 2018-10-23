@@ -12,7 +12,7 @@ namespace LivrariaApi.Adapters
     public static class LivroApiAdapter
     {
         private const string urlBase = "http://localhost:5004/LivroApi/v1";
-        public static async Task<LivroModel> GetLivro(int isbn)
+        public static async Task<LivroModel> Get(int isbn)
         {
             LivroResponseGet responseGet = null;
             LivroModel livroResultado = null;
@@ -42,7 +42,7 @@ namespace LivrariaApi.Adapters
             return livroResultado;
         }
 
-        public static async Task<List<LivroModel>> GetLivro()
+        public static async Task<List<LivroModel>> Get()
         {
             LivroResponseGet responseGet = null;
             List<LivroModel> listaRetorno = null;
@@ -72,7 +72,7 @@ namespace LivrariaApi.Adapters
             return listaRetorno;
         }
 
-        public static async Task<bool> PostLivro(LivroModel request)
+        public static async Task<bool> Post(LivroModel request)
         {
             var uri = new Uri(string.Format("{0}/Livros/", urlBase));
 
@@ -81,7 +81,7 @@ namespace LivrariaApi.Adapters
                 var data = JsonConvert.SerializeObject(request);
                 var content = new StringContent(data, Encoding.UTF8, "application/json");
 
-                HttpResponseMessage response = await cliente.GetAsync(uri);
+                HttpResponseMessage response = await cliente.PostAsync(uri, content);
 
                 if(response.IsSuccessStatusCode)
                 {
@@ -91,7 +91,7 @@ namespace LivrariaApi.Adapters
             return false;
         }
 
-        public static async Task<bool> PutLivro(LivroModel request)
+        public static async Task<bool> Put(LivroModel request)
         {
             var uri = new Uri(string.Format("{0}/Livros/{1}", urlBase, request.Isbn));
 
@@ -100,7 +100,23 @@ namespace LivrariaApi.Adapters
                 var data = JsonConvert.SerializeObject(request);
                 var content = new StringContent(data, Encoding.UTF8, "application/json");
 
-                HttpResponseMessage response = await cliente.GetAsync(uri);
+                HttpResponseMessage response = await cliente.PutAsync(uri, content);
+
+                if(response.IsSuccessStatusCode)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public static async Task<bool> Delete(int isbn)
+        {
+            var uri = new Uri(string.Format("{0}/Livros/{1}", urlBase, isbn));
+
+            using (var cliente = new HttpClient())
+            {
+                HttpResponseMessage response = await cliente.DeleteAsync(uri);
 
                 if(response.IsSuccessStatusCode)
                 {

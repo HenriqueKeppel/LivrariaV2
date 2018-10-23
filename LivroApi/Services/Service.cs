@@ -30,7 +30,7 @@ namespace LivroApi.Services
 
             LivroModel livroMock2 = new LivroModel
             {
-                Isbn = 1,
+                Isbn = 2,
                 Titulo = "Senhor dos Anéis - As Duas Torres",
                 AnoLancamento = new DateTime(2018, 10, 14),
                 Valor = 59
@@ -43,7 +43,7 @@ namespace LivroApi.Services
 
             LivroModel livroMock3 = new LivroModel
             {
-                Isbn = 1,
+                Isbn = 3,
                 Titulo = "Senhor dos Anéis - O Retorno do Rei",
                 AnoLancamento = new DateTime(2018, 10, 14),
                 Valor = 59

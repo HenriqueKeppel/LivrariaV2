@@ -9,19 +9,19 @@ namespace LivrariaApi.Services
 {
     public static class LivroService
     {
-        public static async Task<LivroModel> GetLivro(int isbn)
+        public static async Task<LivroModel> Obter(int isbn)
         {
-            LivroModel livroResponse = LivroApiAdapter.GetLivro(isbn).Result;
+            LivroModel livroResponse = LivroApiAdapter.Get(isbn).Result;
             
             return livroResponse;
         }
 
-        public static async Task<List<LivroModel>> GetLivros()
+        public static async Task<List<LivroModel>> Obter()
         {
-            return LivroApiAdapter.GetLivro().Result;
+            return LivroApiAdapter.Get().Result;
         }
 
-        public static async Task<bool> PostLivro(Livro livro)
+        public static async Task<bool> Incluir(Livro livro)
         {
             LivroModel request = new LivroModel
             {
@@ -42,10 +42,10 @@ namespace LivrariaApi.Services
                 request.Editoras.Add(editora.Id);
             }
             
-            return await LivroApiAdapter.PostLivro(request);
+            return await LivroApiAdapter.Post(request);
         }
 
-        public static async Task<bool> PutLivro(Livro livro)
+        public static async Task<bool> Editar(Livro livro)
         {
             LivroModel request = new LivroModel
             {
@@ -66,7 +66,12 @@ namespace LivrariaApi.Services
                 request.Editoras.Add(editora.Id);
             }
             
-            return await LivroApiAdapter.PutLivro(request);
+            return await LivroApiAdapter.Put(request);
+        }
+
+        public static async Task<bool> Remover(int isbn)
+        {
+            return await LivroApiAdapter.Delete(isbn);
         }
     }
 }
