@@ -11,7 +11,7 @@ namespace LivrariaApi.Services
     {
         public static async Task<bool> ExecutaTransacao(TransacaoModel request)
         {
-            return await TransacaoService.ExecutaTransacao(request);
+            return await TransacaoApiAdapter.Post(request);
         }
     }
 }

@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 
 namespace LivrariaApi.Adapters
 {
-    public static class LoggerApiAdapter
+    public static class TransacaoApiAdapter
     {
         private const string urlBase = "http://localhost:5003/CartaoCreditoApi/v1";
 
@@ -35,13 +35,13 @@ namespace LivrariaApi.Adapters
         public static async Task<IEnumerable<TransacaoModel>> Get(string numeroCartao, string dataTransacao)
         {
             List<TransacaoModel> responseGet = null;
-            string url = string.Empty;            
+            string url = string.Empty;
             
-            if (!string.Empty(numeroCartao) && !string.Empty(dataTransacao))
+            if (!string.IsNullOrEmpty(numeroCartao) && !string.IsNullOrEmpty(dataTransacao))
                 url = string.Format("?numeroCartao={0}&dataTransacao={1}", numeroCartao, dataTransacao);
-            else if (!string.Empty(numeroCartao))
+            else if (!string.IsNullOrEmpty(numeroCartao))
                 url = string.Format("?numeroCartao={0}", numeroCartao);
-            else if (!string.Empty(dataTransacao))
+            else if (!string.IsNullOrEmpty(dataTransacao))
                 url = string.Format("?dataTransacao={0}", dataTransacao);
 
             var uri = new Uri(string.Format("{0}/Transacao/{1}", urlBase, url));

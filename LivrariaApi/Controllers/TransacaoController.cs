@@ -21,14 +21,14 @@ namespace LivrariaApi.Controllers
             bool retorno = false;
 
             // obter dados do usuario a partir do pedido
-            if (pedido.Usuario.Id == 1)
+            if (pedido.Usuario.IdUsuario == 1)
             {
                 CartaoCreditoModel cartaoCredito = new CartaoCreditoModel
                 {
                     Numero = "1234-1234",
                     NomeTitular = "Henrique IEC",
                     Bandeira = "Visa",
-                    DateVencimento = "20/20",
+                    DateVencimento = new DateTime(2018, 20, 20),
                     CodigoSeguranca = 999   
                 };
 
@@ -40,8 +40,9 @@ namespace LivrariaApi.Controllers
                     Cartao = cartaoCredito
                 };
 
-                retorno = TransacaoService.ExecutaTransacao(request);
+                retorno = TransacaoService.ExecutaTransacao(request).Result;
             }
+            return retorno;
         }
     }
 }
