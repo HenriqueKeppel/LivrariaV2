@@ -41,10 +41,15 @@ namespace LivroApi
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseSwagger();
-            app.UseSwaggerUI(c => 
+            app.UseSwagger(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "LivroApi-v1");
+                c.RouteTemplate = "LivroApi/swagger/{documentName}/swagger.json";
+            });
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/LivroApi/swagger/v1/swagger.json", "LivroApi-v1");
+                c.RoutePrefix = "LivroApi/swagger";
+                Console.WriteLine(c.RoutePrefix);
             });
 
             app.UseMvc();

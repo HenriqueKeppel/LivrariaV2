@@ -41,10 +41,15 @@ namespace EditoraApi
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseSwagger();
-            app.UseSwaggerUI(c => 
+            app.UseSwagger(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "EditoraApi-v1");
+                c.RouteTemplate = "EditoraApi/swagger/{documentName}/swagger.json";
+            });
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/EditoraApi/swagger/v1/swagger.json", "EditoraApi-v1");
+                c.RoutePrefix = "EditoraApi/swagger";
+                Console.WriteLine(c.RoutePrefix);
             });
 
             app.UseMvc();

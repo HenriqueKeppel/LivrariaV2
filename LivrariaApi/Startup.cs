@@ -41,10 +41,15 @@ namespace LivrariaApi
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseSwagger();
-            app.UseSwaggerUI(c => 
+            app.UseSwagger(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "LivrariaApi-v1");
+                c.RouteTemplate = "LivrariaApi/swagger/{documentName}/swagger.json";
+            });
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/LivrariaApi/swagger/v1/swagger.json", "LivrariaApi-v1");
+                c.RoutePrefix = "LivrariaApi/swagger";
+                Console.WriteLine(c.RoutePrefix);
             });
 
             app.UseMvc();

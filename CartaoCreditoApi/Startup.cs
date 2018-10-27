@@ -41,10 +41,15 @@ namespace CartaoCreditoApi
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseSwagger();
-            app.UseSwaggerUI(c => 
+            app.UseSwagger(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "CartaoCreditoApi-v1");
+                c.RouteTemplate = "CartaoCreditoApi/swagger/{documentName}/swagger.json";
+            });
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/CartaoCreditoApi/swagger/v1/swagger.json", "CartaoCreditoApi-v1");
+                c.RoutePrefix = "CartaoCreditoApi/swagger";
+                Console.WriteLine(c.RoutePrefix);
             });
 
             app.UseMvc();

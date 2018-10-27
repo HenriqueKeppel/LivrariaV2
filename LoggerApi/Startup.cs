@@ -41,10 +41,15 @@ namespace LoggerApi
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseSwagger();
-            app.UseSwaggerUI(c => 
+            app.UseSwagger(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "LoggerApi-v1");
+                c.RouteTemplate = "LoggerApi/swagger/{documentName}/swagger.json";
+            });
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/LoggerApi/swagger/v1/swagger.json", "LoggerApi-v1");
+                c.RoutePrefix = "LoggerApi/swagger";
+                Console.WriteLine(c.RoutePrefix);
             });
 
             app.UseMvc();

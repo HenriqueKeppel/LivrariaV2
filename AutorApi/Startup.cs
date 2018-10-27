@@ -41,10 +41,15 @@ namespace AutorApi
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseSwagger();
-            app.UseSwaggerUI(c => 
+            app.UseSwagger(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "AutorApi-v1");
+                c.RouteTemplate = "AutorApi/swagger/{documentName}/swagger.json";
+            });
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/AutorApi/swagger/v1/swagger.json", "AutorApi-v1");
+                c.RoutePrefix = "AutorApi/swagger";
+                Console.WriteLine(c.RoutePrefix);
             });
 
             app.UseMvc();

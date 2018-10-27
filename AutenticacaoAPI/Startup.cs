@@ -41,10 +41,15 @@ namespace AutenticacaoAPI
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseSwagger();
-            app.UseSwaggerUI(c => 
+            app.UseSwagger(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "AutenticacaoApi-v1");
+                c.RouteTemplate = "AutenticacaoApi/swagger/{documentName}/swagger.json";
+            });
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/AutenticacaoApi/swagger/v1/swagger.json", "AutenticacaoApi-v1");
+                c.RoutePrefix = "AutenticacaoApi/swagger";
+                Console.WriteLine(c.RoutePrefix);
             });
 
             app.UseMvc();
