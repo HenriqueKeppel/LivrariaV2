@@ -4,6 +4,8 @@
 **Alexandre Cunha Cruz Oliveira**  
 **Henrique Franzoni Keppel**  
 
+## Links no API GW
+
 - AutenticacaoApi: (http://localhost:8080/AutenticacaoApi/swagger/index.html)
 - AutorApi: (http://localhost:8080/AutorApi/swagger/index.html)
 - CartaoCreditoApi: (http://localhost:8080/CartaoCreditoApi/swagger/index.html)
