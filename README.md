@@ -1,8 +1,8 @@
 # Trabalho de Api PUC Minas IEC#
 ## Alunos:
 
-** Alexandre Cunha Cruz Oliveira **  
-** Henrique Franzoni Keppel **  
+**Alexandre Cunha Cruz Oliveira**  
+**Henrique Franzoni Keppel**  
 
 - AutenticacaoApi: (http://localhost:8080/AutenticacaoApi/swagger/index.html)
 - AutorApi: (http://localhost:8080/AutorApi/swagger/index.html)
