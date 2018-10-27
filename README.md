@@ -1,4 +1,4 @@
-# Trabalho de Api PUC Minas IEC#
+# Trabalho de Api PUC Minas IEC
 ## Alunos:
 
 **Alexandre Cunha Cruz Oliveira**  
