@@ -16,6 +16,7 @@
 Iniciando GW
 ```
 cd LivrariaV2/gwAPI
+npm install 
 npm start
 ```
 
