@@ -20,7 +20,7 @@ namespace AutorApi
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
-                .UseUrls("http://localhost:5005")
+                .UseUrls("http://localhost:5002")
                 .Build();
     }
 }

@@ -20,7 +20,7 @@ namespace LivrariaApi
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
-                .UseUrls("http://localhost:5007")
+                .UseUrls("http://localhost:5005")
                 .Build();
     }
 }

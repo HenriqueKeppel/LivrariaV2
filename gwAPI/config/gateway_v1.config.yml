@@ -1,0 +1,49 @@
+http:
+  port: 8080
+admin:
+  port: 9876
+  hostname: localhost
+apiEndpoints:
+  # see: http://www.express-gateway.io/docs/configuration/gateway.config.yml/apiEndpoints
+  cartaoCredito:
+    host: 'localhost'
+    paths: '/CartaoCreditoApi/*'
+  Logger:
+    host: 'localhost'
+    paths: '/LoggerApi/*'
+serviceEndpoints:
+  # see: http://www.express-gateway.io/docs/configuration/gateway.config.yml/serviceEndpoints
+  cartaoCredito:
+    url: 'http://localhost:5003/'
+  Logger:
+    url: 'http://localhost:5001/'
+policies:
+  - cors
+  - expression
+  - log
+  - proxy
+  - rate-limit
+pipelines:
+  # see: https://www.express-gateway.io/docs/configuration/gateway.config.yml/pipelines
+  default:
+    apiEndpoints:
+      - cartaoCredito
+    policies:
+      - log: # policy name
+        - action:    # array of condition/actions objects
+            message: '${req.method} ${req.originalUrl}' # parameter for log action
+      - proxy:
+        - action:
+            serviceEndpoint: cartaoCredito
+            changeOrigin: true
+  default2:
+    apiEndpoints:
+      - Logger
+    policies:
+      - log: # policy name
+          - action:
+              message: "${req.method} ${req.originalUrl}"
+      - proxy:
+        - action:
+            serviceEndpoint: Logger
+            # changeOrigin: true

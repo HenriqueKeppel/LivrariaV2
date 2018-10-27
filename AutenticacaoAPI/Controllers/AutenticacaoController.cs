@@ -15,7 +15,7 @@ namespace AutenticacaoAPI.Controllers
         [HttpPost]
         public async Task<AutenticacaoResponsePost> Post([FromBody]AutenticacaoRequestPost request)
         {
-            AutenticacaoResponsePost result = new AutenticacaoResponsePost();
+        AutenticacaoResponsePost result = new AutenticacaoResponsePost();
 
             if (request.Email == "keppel@iec.com.br" && request.Password == "123456")
             {

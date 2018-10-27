@@ -1,0 +1,131 @@
+http:
+  port: 8080
+admin:
+  port: 9876
+  hostname: localhost
+apiEndpoints:
+  # see: http://www.express-gateway.io/docs/configuration/gateway.config.yml/apiEndpoints
+  Autenticacao:
+    host: 'localhost'
+    paths: '/AutenticacaoApi/*'
+  Autor:
+    host: 'localhost'
+    paths: '/AutorApi/*'
+  cartaoCredito:
+    host: 'localhost'
+    paths: '/CartaoCreditoApi/*'
+  Editora:
+    host: 'localhost'
+    paths: '/EditoraApi/*'
+  Livraria:
+    host: 'localhost'
+    paths: '/LivrariaApi/*'
+  Livro:
+    host: 'localhost'
+    paths: '/LivroApi/*'
+  Logger:
+    host: 'localhost'
+    paths: '/LoggerApi/*'
+
+serviceEndpoints:
+  # see: http://www.express-gateway.io/docs/configuration/gateway.config.yml/serviceEndpoints
+  Autenticacao:
+    url: 'http://localhost:5001/'
+  Autor:
+    url: 'http://localhost:5002/'
+  cartaoCredito:
+    url: 'http://localhost:5003/'
+  Editora:
+    url: 'http://localhost:5004/'
+  Livraria:
+    url: 'http://localhost:5005/'
+  Livro:
+    url: 'http://localhost:5006/'
+  Logger:
+    url: 'http://localhost:5007/'
+policies:
+  - cors
+  - expression
+  - log
+  - proxy
+  - rate-limit
+pipelines:
+  # see: https://www.express-gateway.io/docs/configuration/gateway.config.yml/pipelines
+  autenticacao:
+    apiEndpoints:
+      - Autenticacao
+    policies:
+      - log: # policy name
+        - action:    # array of condition/actions objects
+            message: '${req.method} ${req.originalUrl}' # parameter for log action
+      - proxy:
+        - action:
+            serviceEndpoint: Autenticacao
+            changeOrigin: true
+
+  autor:
+    apiEndpoints:
+      - Autor
+    policies:
+      - log: # policy name
+        - action:    # array of condition/actions objects
+            message: '${req.method} ${req.originalUrl}' # parameter for log action
+      - proxy:
+        - action:
+            serviceEndpoint: Autor
+            changeOrigin: true
+  cartaocredito:
+    apiEndpoints:
+      - cartaoCredito
+    policies:
+      - log: # policy name
+        - action:    # array of condition/actions objects
+            message: '${req.method} ${req.originalUrl}' # parameter for log action
+      - proxy:
+        - action:
+            serviceEndpoint: cartaoCredito
+            changeOrigin: true
+  editora:
+    apiEndpoints:
+      - Editora
+    policies:
+      - log: # policy name
+        - action:    # array of condition/actions objects
+            message: '${req.method} ${req.originalUrl}' # parameter for log action
+      - proxy:
+        - action:
+            serviceEndpoint: Editora
+            changeOrigin: true
+  livraria:
+    apiEndpoints:
+      - Livraria
+    policies:
+      - log: # policy name
+        - action:    # array of condition/actions objects
+            message: '${req.method} ${req.originalUrl}' # parameter for log action
+      - proxy:
+        - action:
+            serviceEndpoint: Livraria
+            changeOrigin: true
+  Livro:
+    apiEndpoints:
+      - Livro
+    policies:
+      - log: # policy name
+        - action:    # array of condition/actions objects
+            message: '${req.method} ${req.originalUrl}' # parameter for log action
+      - proxy:
+        - action:
+            serviceEndpoint: Livro
+            changeOrigin: true
+  logger:
+    apiEndpoints:
+      - Logger
+    policies:
+      - log: # policy name
+        - action:    # array of condition/actions objects
+            message: '${req.method} ${req.originalUrl}' # parameter for log action
+      - proxy:
+        - action:
+            serviceEndpoint: Logger
+            changeOrigin: true

@@ -1,0 +1,38 @@
+http:
+  port: 8080
+admin:
+  port: 9876
+  hostname: localhost
+apiEndpoints:
+  api:
+    host: localhost
+    paths: '/ip'
+  apiLivros:
+    host: localhost
+    paths: '/livros'
+serviceEndpoints:
+  httpbin:
+    url: 'https://httpbin.org'
+  apiLivros:
+    url: 'https://jsonplaceholder.typicode.com/todos/1'
+policies:
+  - cors
+  - expression
+  - log
+  - proxy
+  - rate-limit
+pipelines:
+  default:
+    apiEndpoints:
+      - api
+      - apiLivros
+    policies:
+    # Uncomment `key-auth:` when instructed to in the Getting Started guide.
+    # - key-auth:
+      - proxy:
+          - action:
+              serviceEndpoint: httpbin
+              changeOrigin: true
+          - action:
+              serviceEndpoint: apiLivros
+              changeOrigin: true

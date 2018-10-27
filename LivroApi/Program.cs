@@ -20,7 +20,7 @@ namespace LivroApi
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
-                .UseUrls("http://localhost:5004")
+                .UseUrls("http://localhost:5006")
                 .Build();
     }
 }
