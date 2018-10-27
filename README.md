@@ -1,8 +1,8 @@
-#Trabalho de Api PUC Minas IEC#
-##Alunos:##
+# Trabalho de Api PUC Minas IEC#
+## Alunos:
 
-**Alexandre Cunha Cruz Oliveira**  
-**Henrique Franzoni Keppel**  
+** Alexandre Cunha Cruz Oliveira **  
+** Henrique Franzoni Keppel **  
 
 - AutenticacaoApi: (http://localhost:8080/AutenticacaoApi/swagger/index.html)
 - AutorApi: (http://localhost:8080/AutorApi/swagger/index.html)
@@ -12,7 +12,7 @@
 - LivroApi: (http://localhost:8080/LivroApi/swagger/index.html)
 - LoggerApi: (http://localhost:8080/LoggerApi/swagger/index.html)
 
-##Executando##
+## Executando
 Iniciando GW
 ```
 cd LivrariaV2/gwAPI
