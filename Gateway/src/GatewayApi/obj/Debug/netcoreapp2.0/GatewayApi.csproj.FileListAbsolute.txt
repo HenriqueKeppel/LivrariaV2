@@ -1,0 +1,11 @@
+C:\Git\LivrariaV2\Gateway\src\GatewayApi\bin\Debug\netcoreapp2.0\GatewayApi.deps.json
+C:\Git\LivrariaV2\Gateway\src\GatewayApi\bin\Debug\netcoreapp2.0\GatewayApi.runtimeconfig.json
+C:\Git\LivrariaV2\Gateway\src\GatewayApi\bin\Debug\netcoreapp2.0\GatewayApi.runtimeconfig.dev.json
+C:\Git\LivrariaV2\Gateway\src\GatewayApi\bin\Debug\netcoreapp2.0\GatewayApi.dll
+C:\Git\LivrariaV2\Gateway\src\GatewayApi\bin\Debug\netcoreapp2.0\GatewayApi.pdb
+C:\Git\LivrariaV2\Gateway\src\GatewayApi\obj\Debug\netcoreapp2.0\GatewayApi.csprojAssemblyReference.cache
+C:\Git\LivrariaV2\Gateway\src\GatewayApi\obj\Debug\netcoreapp2.0\GatewayApi.csproj.CoreCompileInputs.cache
+C:\Git\LivrariaV2\Gateway\src\GatewayApi\obj\Debug\netcoreapp2.0\GatewayApi.AssemblyInfoInputs.cache
+C:\Git\LivrariaV2\Gateway\src\GatewayApi\obj\Debug\netcoreapp2.0\GatewayApi.AssemblyInfo.cs
+C:\Git\LivrariaV2\Gateway\src\GatewayApi\obj\Debug\netcoreapp2.0\GatewayApi.dll
+C:\Git\LivrariaV2\Gateway\src\GatewayApi\obj\Debug\netcoreapp2.0\GatewayApi.pdb

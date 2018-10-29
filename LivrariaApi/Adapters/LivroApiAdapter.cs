@@ -11,7 +11,8 @@ namespace LivrariaApi.Adapters
 {
     public static class LivroApiAdapter
     {
-        private const string urlBase = "http://localhost:5004/LivroApi/v1";
+        //private const string urlBase = "http://localhost:5004/LivroApi/v1";
+        private const string urlBase = "http://localhost:5008/LivroApi";
         public static async Task<LivroModel> Get(int isbn)
         {
             LivroResponseGet responseGet = null;
@@ -47,13 +48,10 @@ namespace LivrariaApi.Adapters
             LivroResponseGet responseGet = null;
             List<LivroModel> listaRetorno = null;
 
-            var uri = new Uri(string.Format("{0}/Livros/", urlBase));
+            var uri = new Uri(string.Format("{0}/Livros", urlBase));
 
             using (var cliente = new HttpClient())
             {
-                //var data = JsonConvert.SerializeObject(request);
-                //var content = new StringContent(data, Encoding.UTF8, "application/json");
-
                 HttpResponseMessage response = await cliente.GetAsync(uri);
 
                 if(response.IsSuccessStatusCode)

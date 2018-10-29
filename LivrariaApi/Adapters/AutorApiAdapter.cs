@@ -11,7 +11,8 @@ namespace LivrariaApi.Adapters
 {
     public static class AutorApiAdapter
     {
-        private const string urlBase = "http://localhost:5005/AutorApi/v1";
+        //private const string urlBase = "http://localhost:5005/AutorApi/v1";
+        private const string urlBase = "http://localhost:5008/AutorApi";
         public static async Task<AutorModel> Get(int id)
         {
             AutorResponseGet responseGet = null;
