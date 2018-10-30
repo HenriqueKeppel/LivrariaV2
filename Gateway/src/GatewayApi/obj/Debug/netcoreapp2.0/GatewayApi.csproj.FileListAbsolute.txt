@@ -9,3 +9,6 @@ C:\Git\LivrariaV2\Gateway\src\GatewayApi\obj\Debug\netcoreapp2.0\GatewayApi.Asse
 C:\Git\LivrariaV2\Gateway\src\GatewayApi\obj\Debug\netcoreapp2.0\GatewayApi.AssemblyInfo.cs
 C:\Git\LivrariaV2\Gateway\src\GatewayApi\obj\Debug\netcoreapp2.0\GatewayApi.dll
 C:\Git\LivrariaV2\Gateway\src\GatewayApi\obj\Debug\netcoreapp2.0\GatewayApi.pdb
+C:\Git\LivrariaV2\Gateway\src\GatewayApi\obj\Debug\netcoreapp2.0\GatewayApi.RazorAssemblyInfo.cache
+C:\Git\LivrariaV2\Gateway\src\GatewayApi\obj\Debug\netcoreapp2.0\GatewayApi.RazorAssemblyInfo.cs
+C:\Git\LivrariaV2\Gateway\src\GatewayApi\obj\Debug\netcoreapp2.0\GatewayApi.RazorTargetAssemblyInfo.cache

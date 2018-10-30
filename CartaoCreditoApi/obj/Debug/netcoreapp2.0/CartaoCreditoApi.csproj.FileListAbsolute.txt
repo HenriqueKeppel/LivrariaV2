@@ -9,3 +9,14 @@ C:\Git\CartaoCreditoApi\bin\Debug\netcoreapp2.0\CartaoCreditoApi.dll
 C:\Git\CartaoCreditoApi\bin\Debug\netcoreapp2.0\CartaoCreditoApi.pdb
 C:\Git\CartaoCreditoApi\obj\Debug\netcoreapp2.0\CartaoCreditoApi.dll
 C:\Git\CartaoCreditoApi\obj\Debug\netcoreapp2.0\CartaoCreditoApi.pdb
+C:\Git\LivrariaV2\CartaoCreditoApi\bin\Debug\netcoreapp2.0\CartaoCreditoApi.deps.json
+C:\Git\LivrariaV2\CartaoCreditoApi\bin\Debug\netcoreapp2.0\CartaoCreditoApi.runtimeconfig.json
+C:\Git\LivrariaV2\CartaoCreditoApi\bin\Debug\netcoreapp2.0\CartaoCreditoApi.runtimeconfig.dev.json
+C:\Git\LivrariaV2\CartaoCreditoApi\bin\Debug\netcoreapp2.0\CartaoCreditoApi.dll
+C:\Git\LivrariaV2\CartaoCreditoApi\bin\Debug\netcoreapp2.0\CartaoCreditoApi.pdb
+C:\Git\LivrariaV2\CartaoCreditoApi\obj\Debug\netcoreapp2.0\CartaoCreditoApi.csprojAssemblyReference.cache
+C:\Git\LivrariaV2\CartaoCreditoApi\obj\Debug\netcoreapp2.0\CartaoCreditoApi.csproj.CoreCompileInputs.cache
+C:\Git\LivrariaV2\CartaoCreditoApi\obj\Debug\netcoreapp2.0\CartaoCreditoApi.AssemblyInfoInputs.cache
+C:\Git\LivrariaV2\CartaoCreditoApi\obj\Debug\netcoreapp2.0\CartaoCreditoApi.AssemblyInfo.cs
+C:\Git\LivrariaV2\CartaoCreditoApi\obj\Debug\netcoreapp2.0\CartaoCreditoApi.dll
+C:\Git\LivrariaV2\CartaoCreditoApi\obj\Debug\netcoreapp2.0\CartaoCreditoApi.pdb

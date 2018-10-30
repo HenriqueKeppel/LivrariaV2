@@ -25,18 +25,18 @@ namespace LivrariaApi.Controllers
             {
                 CartaoCreditoModel cartaoCredito = new CartaoCreditoModel
                 {
-                    Numero = "1234-1234",
-                    NomeTitular = "Henrique IEC",
-                    Bandeira = "Visa",
-                    DateVencimento = new DateTime(2018, 20, 20),
-                    CodigoSeguranca = 999   
+                    Numero = pedido.CartaoCredito.Numero,
+                    NomeTitular = pedido.CartaoCredito.NomeTitular,
+                    Bandeira = pedido.CartaoCredito.Bandeira,
+                    DateVencimento = pedido.CartaoCredito.DateVencimento,
+                    CodigoSeguranca = pedido.CartaoCredito.CodigoSeguranca
                 };
 
                 TransacaoModel request = new TransacaoModel
                 {
-                    Valor = 59,
-                    QtdParcelas = 1,
-                    dataTransacao = DateTime.Now,
+                    Valor = pedido.ValorTotal,
+                    QtdParcelas = pedido.QtdParcelas,
+                    dataTransacao = pedido.DataPedido,
                     Cartao = cartaoCredito
                 };
 
