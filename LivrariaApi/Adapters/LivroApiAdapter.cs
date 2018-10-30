@@ -11,7 +11,6 @@ namespace LivrariaApi.Adapters
 {
     public static class LivroApiAdapter
     {
-        //private const string urlBase = "http://localhost:5004/LivroApi/v1";
         private const string urlBase = "http://localhost:5008/LivroApi";
         public static async Task<LivroModel> Get(int isbn)
         {

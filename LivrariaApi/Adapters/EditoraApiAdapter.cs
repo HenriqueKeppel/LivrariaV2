@@ -12,7 +12,6 @@ namespace LivrariaApi.Adapters
 {
     public static class EditoraApiAdapter
     {
-        //private const string urlBase = "http://localhost:5006/EditoraApi/v1";
         private const string urlBase = "http://localhost:5008/EditoraApi";
         public static async Task<EditoraModel> Get(int id)
         {

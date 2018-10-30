@@ -11,7 +11,7 @@ namespace LivrariaApi.Adapters
 {
     public static class AutenticacaoApiAdapter
     {
-        private const string urlBase = "http://localhost:5002/AutenticacaoApi/v1";
+        private const string urlBase = "http://localhost:5008/AutenticacaoApi";
 
         public static async Task<AutenticacaoResponsePost> Post(RequestAutenticacaoPost request)
         {

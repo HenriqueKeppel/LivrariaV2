@@ -11,7 +11,7 @@ namespace LivrariaApi.Adapters
 {
     public static class LoggerApiAdapter
     {
-        private const string urlBase = "http://localhost:5001/LoggerApi/v1";
+        private const string urlBase = "http://localhost:5008/LoggerApi";
 
         public static async Task<bool> Post(PagamentoModel request)
         {

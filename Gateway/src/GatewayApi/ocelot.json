@@ -32,6 +32,39 @@
                     }
                 ],
             "UpstreamPathTemplate": "/AutorApi/{catchAll}"
+        },
+        {
+            "DownstreamPathTemplate": "/LoggerApi/v1/{catchAll}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                    {
+                        "Host": "localhost",
+                        "Port": 5001
+                    }
+                ],
+            "UpstreamPathTemplate": "/LoggerApi/{catchAll}"
+        },
+        {
+            "DownstreamPathTemplate": "/AutenticacaoApi/v1/{catchAll}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                    {
+                        "Host": "localhost",
+                        "Port": 5002
+                    }
+                ],
+            "UpstreamPathTemplate": "/AutenticacaoApi/{catchAll}"
+        },
+        {
+            "DownstreamPathTemplate": "/CartaoCreditoApi/v1/{catchAll}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                    {
+                        "Host": "localhost",
+                        "Port": 5003
+                    }
+                ],
+            "UpstreamPathTemplate": "/CartaoCreditoApi/{catchAll}"
         }
     ],
     "GlobalConfiguration": {

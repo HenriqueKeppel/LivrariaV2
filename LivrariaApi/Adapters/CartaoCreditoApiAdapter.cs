@@ -11,7 +11,7 @@ namespace LivrariaApi.Adapters
 {
     public static class CartaoCreditoApiAdapter
     {
-        private const string urlBase = "http://localhost:5003/CartaoCreditoApi/v1";
+        private const string urlBase = "http://localhost:5008/CartaoCreditoApi";
 
         public static async Task<bool> Post(TransacaoModel request)
         {
