@@ -50,4 +50,4 @@ Post: quaisquer valores podem ser utilizados<br><br>
 <b>API CartaoCreditoApi</b><br>
 Post: quaisquer valores podem ser utilizados<br><br>
 
-
+## Este projeto não contem regras de negócio, seu objetivo é apenas academico sendo um componente de um projeto maior.
